@@ -1,0 +1,7 @@
+---
+- name: Expand disk size and extend partition, PV, LV, and filesystem
+  hosts: node5
+  
+  tasks:
+    - name: Check the status for sshd
+      command: systemctl stats sshd
