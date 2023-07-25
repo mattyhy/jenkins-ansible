@@ -1,5 +1,5 @@
 ---
-- name: Expand disk size and extend partition, PV, LV, and filesystem
+- name: Jenkins Ansible Playbook
   hosts: node5
   
   tasks:
