@@ -4,4 +4,4 @@
   
   tasks:
     - name: Check the status for sshd
-      command: systemctl status sshd
+      command: hostname
