@@ -1,7 +1,15 @@
 ---
-- name: Jenkins Ansible Playbook
+- name: Jenkins Ansible Playbook - checking service status
   hosts: node5
-  
+
   tasks:
-    - name: Check the status for sshd
-      command: hostname
+  - name: checking service status
+    command: systemctl status "{{ item }}"
+    with_items:
+    - firewalld
+    - sshd
+    register: result
+    ignore_errors: yes
+  - name: showing report
+    debug:
+     var: result
